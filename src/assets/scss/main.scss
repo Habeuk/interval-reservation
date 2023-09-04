@@ -1,0 +1,30 @@
+@use './variables.scss' as *;
+@use '@stephane888/wbu-atomique/scss/atome/typography/_default.scss';
+// il ne faut pas charger bootstrap,car il va aloudir l'application et bootstrap est deja sur le site.
+@use '@stephane888/wbu-atomique/scss/bootstrap-all.scss';
+//import prime;
+// ce fichier fait pres de 800Ko.
+// @use 'primeicons/primeicons.css';
+// import custom style
+.book-parking {
+    .book-form {
+        display: flex;
+        > * {
+            flex: auto;
+        }
+        .field-separator {
+            width: 50px;
+
+            position: relative;
+            svg {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 30px;
+                max-width: 100%;
+                margin-inline: auto;
+            }
+        }
+    }
+}
