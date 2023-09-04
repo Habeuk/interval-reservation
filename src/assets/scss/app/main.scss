@@ -1,26 +1,61 @@
 @use './variables.scss' as *;
 @use '@stephane888/wbu-atomique/scss/atome/typography/_default.scss';
 // il ne faut pas charger bootstrap,car il va aloudir l'application et bootstrap est deja sur le site.
+@use '../primevue/main.scss';
 @use '@stephane888/wbu-atomique/scss/bootstrap-all.scss';
+@use './date-time-input.scss';
+
 //import prime;
 // ce fichier fait pres de 800Ko.
 // @use 'primeicons/primeicons.css';
 // import custom style
+.bg-gray-lg {
+    background-color: #f0f0f0;
+}
+
+.custom-primary-btn {
+    background-image: linear-gradient(90deg, $wbu-color-primary, rgba(244, 159, 29, 0));
+    transition: all .15s ease-in;
+
+    &:hover {
+        background-position: calc(-50% - 1px);
+        background-size: calc(300% + 2px);
+    }
+}
+
 .book-parking {
+    .book-parking-block {
+        .parking-icon {
+            max-height: 75px;
+
+            svg {
+                height: calc(100% + 1rem);
+                margin-top: -1rem;
+            }
+        }
+    }
+
     .book-form {
         display: flex;
-        > * {
+
+
+        >* {
             flex: auto;
         }
+
         .field-separator {
             width: 50px;
 
             position: relative;
+
             svg {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
+                top: 0;
+                margin-block: auto;
+                transform: translateY(20%);
                 height: 30px;
                 max-width: 100%;
                 margin-inline: auto;
