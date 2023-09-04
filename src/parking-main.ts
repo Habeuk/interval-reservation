@@ -1,4 +1,4 @@
-import './assets/scss/app/main.scss'
+import './assets/scss/app-parking/main.scss'
 // import 'primevue/resources/themes/lara-light-indigo/theme.css'
 
 import { createApp } from 'vue'
@@ -10,4 +10,4 @@ const app = createApp(App)
 
 app.use(createPinia())
 app.use(PrimeVue)
-app.mount('#app')
+app.mount('#app-parking')

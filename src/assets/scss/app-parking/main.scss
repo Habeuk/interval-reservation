@@ -1,4 +1,4 @@
-@use './variables.scss' as *;
+@use '../app/variables.scss' as *;
 @use '@stephane888/wbu-atomique/scss/atome/typography/_default.scss';
 // il ne faut pas charger bootstrap,car il va aloudir l'application et bootstrap est deja sur le site.
 @use '../primevue/main.scss';

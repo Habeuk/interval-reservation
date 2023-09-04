@@ -27,7 +27,8 @@ const setReservation = () => {
     <div class="book-parking container bg-light py-5">
       <h3 class="book-parking-title h6 text-center">{{ store.labels.description }}</h3>
       <div class="book-parking-block row">
-        <div class="parking-icon col-md-2 text-right text-primary" v-html="parkingIcon">
+        <div class="parking-icon col-md-2 my-0 my-md-auto  my-lg-0 text-md-right text-center mt-3 mt-md-0 text-primary"
+          v-html="parkingIcon">
         </div>
         <div class="col-md-8 book-form">
           <DateTimeInput :date-time="store.debut" :label="store.labels.debut" @up-date="setBeginDate" />
@@ -41,8 +42,8 @@ const setReservation = () => {
           <DateTimeInput :date-time="store.fin" :label="store.labels.fin" :min-date-time="store.debut"
             :available-field="store.endAvailable" />
         </div>
-        <div class="call-to-action col-md-2 text-left d-flex flex-column justify-content-end">
-          <pButton :label="store.labels.callToAction" severity="primary" class="mb-3 py-3"
+        <div class="call-to-action col-md-2 text-left d-flex flex-column justify-content-lg-end justify-content-around">
+          <pButton :label="store.labels.callToAction" severity="primary" class="mb-lg-3 py-3"
             :class="{ 'btn-outline-light': store.endAvailable }" @click="setReservation"
             :disabled="!store.endAvailable" />
         </div>
